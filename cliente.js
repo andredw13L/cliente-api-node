@@ -8,7 +8,7 @@ async function obterTarefas() {
         return response.data
         
     } catch (error) {
-        console.log('Erro ao obter tarefa: ', error);
+        console.log('Erro ao obter tarefa: ', error)
     }
 }
 
@@ -19,26 +19,26 @@ async function criarTarefa(descricao) {
         return response.data
 
     } catch (error) {
-        console.log('Erro ao criar tarefa: ', error);
+        console.log('Erro ao criar tarefa: ', error)
     }
 }
 
 async function atualizarTarefa(id, descricao) {
     try {
-      const response = await axios.put(`${URL_BASE}/tarefas/${id}`, { descricao });
-      return response.data;
+      const response = await axios.put(`${URL_BASE}/tarefas/${id}`, { descricao })
+      return response.data
     } catch (error) {
-      console.error('Erro ao atualizar tarefa:', error);
+      console.error('Erro ao atualizar tarefa:', error)
     }
 }
 
 async function excluirTarefa(id) {
     try {
-      const response = await axios.delete(`${URL_BASE}/tarefas/${id}`);
-      return response.data;
+      const response = await axios.delete(`${URL_BASE}/tarefas/${id}`)
+      return response.data
     } catch (error) {
-      console.error('Erro ao excluir tarefa:', error);
+      console.error('Erro ao excluir tarefa:', error)
     }
 }
 
-module.exports = { obterTarefas, criarTarefa, atualizarTarefa, excluirTarefa };
+module.exports = { obterTarefas, criarTarefa, atualizarTarefa, excluirTarefa }
